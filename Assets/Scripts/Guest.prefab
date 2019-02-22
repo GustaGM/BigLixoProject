@@ -24,6 +24,9 @@ GameObject:
   - component: {fileID: 65872278158253702}
   - component: {fileID: 114431455118583374}
   - component: {fileID: 195654261031741440}
+  - component: {fileID: 114457806053368434}
+  - component: {fileID: 114860024400920464}
+  - component: {fileID: 114462544625214292}
   m_Layer: 0
   m_Name: Guest
   m_TagString: Untagged
@@ -116,6 +119,55 @@ MonoBehaviour:
   - {fileID: 1429886678024496, guid: 6eae80b814205174391e1158d523691b, type: 2}
   - {fileID: 1429886678024496, guid: e87327b14d395904ca983ca59de0c2f6, type: 2}
   PosicoesPai: {fileID: 0}
+  grupoSocial: 0
+  personalidade: 0
+  sociabilidade: 0
+  aventureiroSocial: 0
+  estilo: 0
+  modificadorHumorAmbiente: 0
+--- !u!114 &114457806053368434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654919895225014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa1cf98c138eb640b5f73cc0396234f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bebendo: 0
+  bebisse: 0
+  bebisseStage: 0
+  multiplicadorBebida: 0
+  dependenciaAlcool: 0
+  modificadorHumorBebida: 0
+  modificadorHumorSemBebida: 0
+  modificadorBebidaEstomagoVazio: 1
+--- !u!114 &114462544625214292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654919895225014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb89defd262e593448b4ab89e90bb85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  humor: 0
+--- !u!114 &114860024400920464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654919895225014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 702e9135a8f6b4f4a8e4dd9cbdf3d2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estomagoTamanho: 0
 --- !u!195 &195654261031741440
 NavMeshAgent:
   m_ObjectHideFlags: 1

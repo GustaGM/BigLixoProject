@@ -14,7 +14,7 @@ public class MecanicasAlcool : MonoBehaviour {
     private GameObject itemAtual;
 	[Range(0f,100f)]
     public float bebisse;
-    private int bebisseStage;
+    public int bebisseStage;
 	string descricaoStage;
     float resistenciaAlcool=0f;
     float regeneraçãoAlcool=0.3f;
@@ -32,9 +32,16 @@ public class MecanicasAlcool : MonoBehaviour {
 	public float modificadorHumorBebida;
 	public float modificadorHumorSemBebida;
 	public float modificadorBebidaEstomagoVazio=1;
+
+
+//
+
 	#endregion
+
+
 	// Use this for initialization
 	void Start () {
+//
 		rend = GetComponent<Renderer>();
 		MecHum=GetComponent<MecanicasHumor>();
         tempoRepeticaoBebida=(tempoBebida+regeneraçãoAlcool)/2;
