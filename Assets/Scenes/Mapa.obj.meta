@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: aba4e9695dad4744fb59e51e18858206
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Balcao
+    100002: Cadeira
+    100004: Cadeira1
+    100006: Cadeira2
+    100008: Cadeira3
+    100010: Churrasqueira
+    100012: Geladeira
+    100014: Grama
+    100016: //RootNode
+    100018: Mesa1
+    100020: Mesa2
+    100022: Mesa3
+    100024: Parede
+    100026: pCube7
+    100028: Portao
+    400000: Balcao
+    400002: Cadeira
+    400004: Cadeira1
+    400006: Cadeira2
+    400008: Cadeira3
+    400010: Churrasqueira
+    400012: Geladeira
+    400014: Grama
+    400016: //RootNode
+    400018: Mesa1
+    400020: Mesa2
+    400022: Mesa3
+    400024: Parede
+    400026: pCube7
+    400028: Portao
+    2100000: BalcaoMat
+    2100002: CadeiraMat
+    2100004: Cadeira1Mat
+    2100006: Cadeira2Mat
+    2100008: Cadeira3Mat
+    2100010: ChurrasqueiraMat
+    2100012: GeladeiraMat
+    2100014: GramaMat
+    2100016: Mesa1Mat
+    2100018: Mesa2Mat
+    2100020: Mesa3Mat
+    2100022: ParedeMat
+    2100024: pCube7Mat
+    2100026: PortaoMat
+    2300000: Balcao
+    2300002: Cadeira
+    2300004: Cadeira1
+    2300006: Cadeira2
+    2300008: Cadeira3
+    2300010: Churrasqueira
+    2300012: Geladeira
+    2300014: Grama
+    2300016: Mesa1
+    2300018: Mesa2
+    2300020: Mesa3
+    2300022: Parede
+    2300024: pCube7
+    2300026: Portao
+    3300000: Balcao
+    3300002: Cadeira
+    3300004: Cadeira1
+    3300006: Cadeira2
+    3300008: Cadeira3
+    3300010: Churrasqueira
+    3300012: Geladeira
+    3300014: Grama
+    3300016: Mesa1
+    3300018: Mesa2
+    3300020: Mesa3
+    3300022: Parede
+    3300024: pCube7
+    3300026: Portao
+    4300000: Balcao
+    4300002: Cadeira
+    4300004: Cadeira1
+    4300006: Cadeira2
+    4300008: Cadeira3
+    4300010: Churrasqueira
+    4300012: Geladeira
+    4300014: Grama
+    4300016: Mesa1
+    4300018: Mesa2
+    4300020: Mesa3
+    4300022: Parede
+    4300024: pCube7
+    4300026: Portao
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
