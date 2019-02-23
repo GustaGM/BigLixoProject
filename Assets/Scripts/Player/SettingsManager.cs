@@ -12,7 +12,7 @@ public class SettingsManager : MonoBehaviour {
     public AudioSource musicSource;
     public Resolution[] resolutions;
     private GameSettings gameSettings;
-    public Button applyButton;
+    //public Button applyButton;
 
     void OnEnable()
     {
@@ -22,7 +22,7 @@ public class SettingsManager : MonoBehaviour {
         resolutionDropdown.onValueChanged.AddListener(delegate { OnResolutionChange(); });
         soundVolumeSlider.onValueChanged.AddListener(delegate { OnMusicVolumeChange(); });
         //
-        applyButton.onClick.AddListener(delegate{OnApplyButtonClick();});
+        //applyButton.onClick.AddListener(delegate{OnApplyButtonClick();});
         //
         resolutions = Screen.resolutions;
 
@@ -30,9 +30,9 @@ public class SettingsManager : MonoBehaviour {
         {
             resolutionDropdown.options.Add(new Dropdown.OptionData(resolution.ToString()));
         }
-        //
+        /*
         LoadSettings();
-        //
+        */
     }
     public void OnFullscreenToggle() {
         gameSettings.fullscreen = Screen.fullScreen = fullscreenToggle.isOn;
@@ -47,9 +47,11 @@ public class SettingsManager : MonoBehaviour {
     {
         musicSource.volume = gameSettings.musicVolume = soundVolumeSlider.value;
     }
+    /*
     public void OnApplyButtonClick(){
         SaveSettings();
     }
+    
     public void SaveSettings(){
         string jasonData = JsonUtility.ToJson(gameSettings, true);
         File.WriteAllText(Application.persistentDataPath + "/gameSettings.json", jasonData);
@@ -63,5 +65,5 @@ public class SettingsManager : MonoBehaviour {
         
         
     }
-
+    */
 }

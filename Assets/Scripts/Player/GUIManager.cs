@@ -36,17 +36,17 @@ public class GUIManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        BebisseGUI();
+        BebisseGUI(playerMecAlc);
         HumorGUI();
         
     }
 
     public void ConvidadoGUI(){
-        if (convidadoIsActive)
+       /* if (convidadoIsActive)
         {
             canecasGuests[0].SetActive(true);
             canecasGuests[0].SetActive(true);
-        }
+        }*/
     }
     public void BebisseGUI(MecanicasAlcool mecAlc)
     {

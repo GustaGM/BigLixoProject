@@ -14,6 +14,7 @@ public class Carne : Item {
     int porcoes;
     private Renderer rend;
 
+    public bool estaNaMesa = false;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +35,11 @@ public class Carne : Item {
             CarneStatus();
             Churrasqueira.Instance.Remover(carneIndex, status);
             cozinhar = false;
+
+        }
+        else if (Input.GetMouseButtonDown(0) && estaNaMesa)// linha 43 Mesa
+        {
+            this.gameObject.SetActive(false);
 
         }
     }

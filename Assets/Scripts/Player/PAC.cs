@@ -172,7 +172,14 @@ public class PAC : MonoBehaviour {
         }
         else if (other.gameObject.tag.Equals("mesa"))
         {
-            other.gameObject.GetComponentInParent<Mesa>().menuPodeAtivar = true;            
+            other.gameObject.GetComponentInParent<Mesa>().menuPodeAtivar = true;
+            //Retirar carne mesa
+            if (other.gameObject.GetComponentInParent<Mesa>().carneMesa.GetComponent<Carne>().isActiveAndEnabled)
+            {
+                other.gameObject.GetComponentInParent<Mesa>().carneMesa.GetComponent<Carne>().estaNaMesa = true;
+            }
+            //
+            
         }
     }
     private void OnTriggerExit(Collider other)

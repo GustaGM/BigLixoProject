@@ -40,7 +40,7 @@ public class Mesa : Interactive {
                 GameObject temp = carneMesa;                
                 carneMesa = clone;
 				carneMesa.SetActive(true);
-				Destroy(temp);
+                Destroy(temp);
 			}
             temCarneNaMesa = true;
         }       
