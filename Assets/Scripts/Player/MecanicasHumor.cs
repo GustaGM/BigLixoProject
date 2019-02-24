@@ -5,7 +5,7 @@ using UnityEngine;
 public class MecanicasHumor : MonoBehaviour {
 
 	[Range(0f,100f)]
-	public float humor;
+	public float humor = 0;
 	[Range(-1.0f,1.0f)]
 	float humorParametro; //Determina onde na escala de humor a pessoa fica de mau humor.
 	float humorRedutor;

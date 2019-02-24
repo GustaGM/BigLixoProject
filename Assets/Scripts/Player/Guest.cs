@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 enum tipoDecisao{IRPARAMESA,IRPARAGELADEIRA}
 public class Guest : MonoBehaviour {
-
 	private MecanicasAlcool MecAlc;
 	private MecanicasHumor MecHum;
 	private MecanicasFome MecFom;
@@ -113,4 +112,19 @@ public class Guest : MonoBehaviour {
 		}
 		return novaPos;
 	}
+
+    #region GETSET
+
+    public MecanicasAlcool GetMecanicasAlcool() {
+        return MecAlc;
+    }
+    public MecanicasFome GetMecanicasFome(){
+        return MecFom;
+    }
+    public MecanicasHumor GetMecanicasHumor(){
+        return MecHum;
+    }
+
+    #endregion
+
 }
