@@ -47,12 +47,17 @@ public class Guest : MonoBehaviour {
 		//	timer+=Time.deltaTime;
 		//}
     }
-	private void OnMouseOver(){
-		GUIManager.Instance.mostraConvidado(this);
+    private void OnMouseEnter()
+    {
+        GUIManager.Instance.mostraConvidado(this);
+    }
+    private void OnMouseOver(){
+		
 	}
 	private void OnMouseExit(){
 		GUIManager.Instance.escondeConvidado();
-	}
+        GUIManager.Instance.ExitFixGestUIProblem();
+    }
 
 	/*
 	void Decisions(tipoDecisao decisao){

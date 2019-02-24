@@ -26,6 +26,8 @@ public class MecanicasAlcool : MonoBehaviour {
     private Queue BebidasRecentes = new Queue();
     private int ContadorDeMistura;
 
+
+
 	#region Variaveis IA
 	[Range(0f,1f)]
 	public float dependenciaAlcool;
@@ -87,6 +89,7 @@ public class MecanicasAlcool : MonoBehaviour {
             if(contSec==tempoBebida){
                 EncerrarBebida();
             }
+
         }else{
 			AlcoolDegen();
         }
@@ -105,6 +108,7 @@ public class MecanicasAlcool : MonoBehaviour {
                     bebisse=0;
                 }
            }
+
 	}
 	void DefinirMultiplicadoresVelocidade(){
         if(tempoSemBebida<=tempoRepeticaoBebida){

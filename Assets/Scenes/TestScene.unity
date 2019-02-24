@@ -995,18 +995,20 @@ MonoBehaviour:
   humorConvidado: {fileID: 0}
   nomeConvidado: {fileID: 0}
   bebisseConvidado: {fileID: 0}
-  happyIcon: {fileID: 21300000, guid: 49cff16882368914c9b407cf63441607, type: 3}
-  veryHappyIcon: {fileID: 21300000, guid: a39b988f33feccc4a939cec5ef5994d1, type: 3}
-  angryIcon: {fileID: 21300000, guid: f9842904f4ec8ed4b9732771c58699b7, type: 3}
-  veryAngryIcon: {fileID: 21300000, guid: eb3118ded04c1a44eba92979ef8957b5, type: 3}
-  normalIcon: {fileID: 21300000, guid: 0f22044aaecde3749a7c3c0b934d7056, type: 3}
-  playerHumorIcon: {fileID: 0}
+  extremelyhappyIcon: {fileID: 21300000, guid: a071eb2d114f1c647b999152f9831dff, type: 3}
+  veryHappyIcon: {fileID: 21300000, guid: a26715ff58f1fc1438283ff527ff2b29, type: 3}
+  happyIcon: {fileID: 21300000, guid: 9fb31158d8b67644b9efa547ea0147f7, type: 3}
+  normalIcon: {fileID: 21300000, guid: 48c9e0a0db8cac8469d8a0179611c0b2, type: 3}
+  angryIcon: {fileID: 21300000, guid: 2cafc2a1e357b83499412c5123b9b6ff, type: 3}
+  veryAngryIcon: {fileID: 21300000, guid: e973742a45095ae4ea1f2f9b75cdebb7, type: 3}
+  extremelyAngryIcon: {fileID: 21300000, guid: 38740453364a3954db8176330535da16, type: 3}
+  playerHumorIcon: {fileID: 1980467841}
   playerHumorBar: {fileID: 1640669168}
   guestHumorIcon: {fileID: 1181318727}
   guestHumorBar: {fileID: 95276838}
   playerMecAlc: {fileID: 438419461}
   playerMecHumor: {fileID: 438419462}
-  canecas:
+  canecasPlayer:
   - {fileID: 1481542792}
   - {fileID: 616624546}
   - {fileID: 297804160}
@@ -2636,7 +2638,7 @@ GameObject:
   - component: {fileID: 563131565}
   - component: {fileID: 563131564}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: HumorText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3760,9 +3762,9 @@ RectTransform:
   m_Father: {fileID: 1426010166}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 463, y: -127}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -8.5, y: -83.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &753272292
@@ -5049,6 +5051,7 @@ RectTransform:
   - {fileID: 330141108}
   - {fileID: 953697480}
   - {fileID: 1187598859}
+  - {fileID: 1980467839}
   m_Father: {fileID: 2098602549}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5859,7 +5862,7 @@ GameObject:
   - component: {fileID: 1181318728}
   - component: {fileID: 1181318727}
   m_Layer: 5
-  m_Name: HumorIcon
+  m_Name: GuestHumorIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5873,14 +5876,14 @@ RectTransform:
   m_GameObject: {fileID: 1181318725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.57019407, y: 0.57019407, z: 0.57019407}
   m_Children: []
   m_Father: {fileID: 1426010166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -97, y: -57}
+  m_AnchoredPosition: {x: -48.1, y: -34.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181318727
@@ -5902,7 +5905,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a39b988f33feccc4a939cec5ef5994d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48c9e0a0db8cac8469d8a0179611c0b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6264,7 +6267,7 @@ GameObject:
   - component: {fileID: 1288092361}
   - component: {fileID: 1288092360}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: BebisseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6809,7 +6812,7 @@ GameObject:
   - component: {fileID: 1385297190}
   - component: {fileID: 1385297189}
   m_Layer: 5
-  m_Name: Image
+  m_Name: GuestCerveja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6830,7 +6833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 316, y: 98}
+  m_AnchoredPosition: {x: 322.3, y: 134.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385297189
@@ -8107,7 +8110,7 @@ GameObject:
   - component: {fileID: 1534478257}
   - component: {fileID: 1534478256}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: GuestCerveja(3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8128,7 +8131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 378.50003, y: 98}
+  m_AnchoredPosition: {x: 384.80002, y: 134.70001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534478256
@@ -8252,7 +8255,7 @@ GameObject:
   - component: {fileID: 1560382723}
   - component: {fileID: 1560382722}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: GuestCerveja(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8273,7 +8276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 346.80005, y: 98}
+  m_AnchoredPosition: {x: 353.10004, y: 134.70001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1560382722
@@ -9020,7 +9023,7 @@ GameObject:
   - component: {fileID: 1799132274}
   - component: {fileID: 1799132273}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: GuestCerveja(5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9041,7 +9044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 442.00003, y: 98}
+  m_AnchoredPosition: {x: 448.30002, y: 134.70001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799132273
@@ -10240,6 +10243,75 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1980467838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1980467839}
+  - component: {fileID: 1980467840}
+  - component: {fileID: 1980467841}
+  m_Layer: 5
+  m_Name: PlayerHumorIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1980467839
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980467838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3505, y: 2.3505, z: 2.3505}
+  m_Children: []
+  m_Father: {fileID: 979150068}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -892, y: 413}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1980467840
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980467838}
+  m_CullTransparentMesh: 0
+--- !u!114 &1980467841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980467838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 48c9e0a0db8cac8469d8a0179611c0b2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!1 &2047518806
 GameObject:
   m_ObjectHideFlags: 0
@@ -10724,7 +10796,7 @@ GameObject:
   - component: {fileID: 2133219938}
   - component: {fileID: 2133219937}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: GuestCerveja(4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10745,7 +10817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 409.20004, y: 98}
+  m_AnchoredPosition: {x: 415.50003, y: 134.70001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2133219937
@@ -10903,7 +10975,7 @@ GameObject:
   - component: {fileID: 2147108762}
   - component: {fileID: 2147108761}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NomeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
