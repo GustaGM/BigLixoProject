@@ -9,9 +9,9 @@ public class Bebida : Item {
 	public float multiplicadorNormal;
 	public float multiplicadorVirada;
 	public float multiplicadorMistura;
+	[Range(-2,2)]
 	public float qualidadeBebida;
 	public float humorFlat;
-	public int tamanhoBebida;
 	[SerializeField]
 	public tipoBebida tipo;
 	public string nome;

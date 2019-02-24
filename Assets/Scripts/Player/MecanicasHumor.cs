@@ -8,19 +8,19 @@ public class MecanicasHumor : MonoBehaviour {
 	public float humor = 0;
 	[Range(-1.0f,1.0f)]
 	float humorParametro; //Determina onde na escala de humor a pessoa fica de mau humor.
-	float humorRedutor;
+	public float humorRedutor; //Reducao fixa de humor por segundo
 	[Range(0f,1f)]
-	float percentualRedutor; //Infleuncia do Redutor sobre o Modificador
+	public float percentualRedutor; //Infleuncia do Redutor sobre o Modificador
 	[Range(0f,1f)]
-	float percentualModificador; //Influencia das atividades de alteracao de humor sobre o Modificador
-	float humorModificador; //Numero que determina a direcao e velocidade do humor apos uma atividade.
+	public float percentualModificador; //Influencia das atividades de alteracao de humor sobre o Modificador
+	float humorModificador; //Numero que determina a direcao e velocidade do humor apos uma atividade, aplicado todo segundo.
 	[Range(-3f,3f)]
 	private int humorIntensidade; //Demonstra a variavel anterior
 
-	float timer;
+	float timer=0;
 	// Use this for initialization
 	void Start () {
-		
+		humorRedutor=humorRedutor*GameManager.Instance.multiplicadorMestreHumor;
 	}
 	
 	// Update is called once per frame
@@ -28,14 +28,18 @@ public class MecanicasHumor : MonoBehaviour {
 		AtualizarHumor();
 	}
 	public void ModificarHumor(float x){
+		x=x*GameManager.Instance.multiplicadorMestreHumor;
 		humor=humor+x;
 		humorModificador=humorModificador+(x*percentualModificador);
+		RegularHumor();
 	}
 	private void AtualizarHumor(){
-		timer=Time.deltaTime+timer;
+		timer += Time.deltaTime;
 		if(timer>1f){
 			humor=humor-humorRedutor+humorModificador;
 			humorModificador=humorModificador-(humorRedutor*percentualRedutor);
+			RegularHumor();
+			timer=0;
 		}
 	}
 	private void DefinirIntensidade(){
@@ -63,5 +67,13 @@ public class MecanicasHumor : MonoBehaviour {
 	}
 	public float getHumor(){
 		return humor;
+	}
+	void RegularHumor(){
+		if(humor>100){
+			humor=100;
+		}else if(humor<0){
+			humor=0;
+		}
+		
 	}
 }
