@@ -163,7 +163,7 @@ MonoBehaviour:
   personalidade: 0
   sociabilidade: 0
   aventureiroSocial: 0
-  estilo: 0
+  estilo: 0.1
   modificadorHumorAmbiente: 0
 --- !u!114 &114457806053368434
 MonoBehaviour:
@@ -177,8 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bebendo: 0
-  bebisse: 0
-  bebisseStage: 0
+  resistenciaAlcool: 0
+  "regenera\xE7\xE3oAlcool": 0.3
   multiplicadorBebida: 0
   dependenciaAlcool: 0
   modificadorHumorBebida: 0
@@ -195,8 +195,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb89defd262e593448b4ab89e90bb85b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  humor: 0
-  humorRedutor: 0
+  humor: 65
+  humorRedutor: 0.4
+  percentualRedutor: 0.14
+  percentualModificador: 0.08
+  trocou: 0
 --- !u!114 &114860024400920464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,10 +212,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estomagoTamanho: 15
-  digestao: 0
+  digestao: 15
   limitadorPlayer: 0
   modificadorHumorFome: 0
-  iminenciaFome: 0
+  iminenciaFome: 0.29
 --- !u!114 &114900190630275548
 MonoBehaviour:
   m_ObjectHideFlags: 1

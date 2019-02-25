@@ -7,17 +7,19 @@ public class MecanicasAlcool : MonoBehaviour {
 	private Renderer rend;
 	MecanicasHumor MecHum;
 	public bool bebendo=false;
-    //
+    //PENIS
     private float timer=0f;
     private int contSec=0;
     //
     private GameObject itemAtual;
 	[Range(0f,100f)]
-    public float bebisse;
-    public int bebisseStage;
+    private float bebisse;
+    public float Bebisse{get{return bebisse;} set{bebisse = Mathf.Clamp(value,0,100);}}
+    private int bebisseStage=1;
+    public int BebisseStage{get{return bebisseStage;} set{bebisseStage = Mathf.Clamp(value,1,6);}}
 	string descricaoStage;
-    float resistenciaAlcool=0f;
-    float regeneraçãoAlcool=0.3f;
+    public float resistenciaAlcool=0f;
+    public float regeneraçãoAlcool=0.3f;
     int tempoBebida=7;
     public int multiplicadorBebida=0;
     private float alcoolFinal;
@@ -172,4 +174,6 @@ public class MecanicasAlcool : MonoBehaviour {
 			descricaoStage="DEU PT";
 		}
 	}
+
+
 }
