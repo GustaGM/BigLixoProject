@@ -56,6 +56,7 @@ public class Guest : MonoBehaviour {
 	}
 	private void OnMouseExit(){
 		GUIManager.Instance.escondeConvidado();
+        GUIManager.Instance.ExitFixGestUIProblem();
     }
 
 	/*
@@ -116,19 +117,6 @@ public class Guest : MonoBehaviour {
 		}
 		return novaPos;
 	}
-	void HumorBebida(Bebida bbd){ //Calcula o quanto humor um NPC vai receber da bebida, player sempre recebe o valor fixo.
-		float x,humorFinal;
-		x=bbd.qualidadeBebida-estilo;
-		if(x>=0){
-			humorFinal=1+(0.5f*x);
-			MecHum.ModificarHumor(humorFinal);
-		}else{
-			x=x*-1;
-			humorFinal=1+(0.5f*x);
-			humorFinal=1/humorFinal;
-			MecHum.ModificarHumor(humorFinal);
-		}
-    }
 
     #region GETSET
 

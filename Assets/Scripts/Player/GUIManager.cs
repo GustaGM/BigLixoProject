@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GUIManager : MonoBehaviour {
     [Header("Variaveis")]
     public float humorValue = 5f;
+    int auxCaneca = 1;
     bool convidadoIsActive = false;
     [Header("Textos")]
     public Text humorConvidado;
@@ -64,14 +65,14 @@ public class GUIManager : MonoBehaviour {
     }
     #region MainGUI
     public void PlayerGUI() {
-        BebisseGUI();
+        BebisseGUI(playerMecAlc,canecasPlayer);
         HumorGUI(playerHumorBar,playerMecHumor);
     }
 
     public void ConvidadoGUI(){
        if (convidadoIsActive)
         {
-            BebisseGUI(guestMecAlc);
+            BebisseGUI(guestMecAlc,canecasGuests);
             HumorGUI(guestHumorBar,guestMecHumor);
             //colocar gui fome e gui humor
         }
@@ -84,30 +85,14 @@ public class GUIManager : MonoBehaviour {
         icon.sprite = humorState;
     }
 
-    public void BebisseGUI()
-    {
-        canecasPlayer[playerMecAlc.bebisseStage-1].SetActive(true);
-        calculoFill(playerMecAlc,canecasPlayer);
-        if ((playerMecAlc.bebisseStage<canecasPlayer.Length)&&(canecasPlayer[playerMecAlc.bebisseStage].activeSelf))
+    public void BebisseGUI(MecanicasAlcool mecAlc, GameObject[] canecas){
+        canecas[mecAlc.bebisseStage - 1].SetActive(true);
+        calculoFill(mecAlc,canecas);
+        if (auxCaneca > mecAlc.bebisseStage)
         {
-            canecasPlayer[playerMecAlc.bebisseStage].SetActive(false);
-        }       
-    }
-    public void BebisseGUI(MecanicasAlcool mecAlc){
-        for(int i=0;i<canecasGuests.Length;i++){
-            canecasGuests[i].GetComponent<Image>().fillAmount = 0;
-            canecasGuests[i].SetActive(false);
-            if(i<mecAlc.bebisseStage){
-                canecasGuests[i].SetActive(true);
-                canecasGuests[i].GetComponent<Image>().fillAmount = 1;
-            }
+            canecas[auxCaneca - 1].SetActive(false);
         }
-        canecasGuests[mecAlc.bebisseStage - 1].SetActive(true);
-        calculoFill(mecAlc,canecasGuests);
-        if ((playerMecAlc.bebisseStage<canecasGuests.Length)&&(canecasGuests[mecAlc.bebisseStage].activeSelf))
-        {
-            canecasGuests[mecAlc.bebisseStage].SetActive(false);
-        } 
+        auxCaneca = mecAlc.bebisseStage;
     }
 
     public void calculoFill(MecanicasAlcool mecAlc, GameObject[] canecas)
@@ -172,7 +157,35 @@ public class GUIManager : MonoBehaviour {
 
     #region Guest
 
-
+    private void EnterFixGestUIProblem() {
+        if (guestMecAlc)
+        {
+            for (int i = guestMecAlc.bebisseStage - 1; i > 0; i--)
+            {
+                if (!canecasGuests[i - 1].activeSelf)
+                {
+                    canecasGuests[i - 1].SetActive(true);
+                }
+                if (canecasGuests[i - 1].GetComponent<Image>().fillAmount != 1)
+                {
+                    canecasGuests[i - 1].GetComponent<Image>().fillAmount = 1;
+                }                
+            }
+        }            
+    }
+    private void ExitFixGestUIProblem(){
+        for (int i = 0; i < canecasGuests.Length; i++)
+        {
+            if (canecasGuests[i ].activeSelf)
+            {
+                canecasGuests[i ].SetActive(false);
+            }
+            if (canecasGuests[i ].GetComponent<Image>().fillAmount != 0)
+            {
+                canecasGuests[i ].GetComponent<Image>().fillAmount = 0;
+            }           
+        }
+    }
     /*public void ChangeGuiGuestName(string nome) {// ou mudar para Text nome e chamar nome.text
         nomeConvidado.text = nome;
     }*/    
@@ -181,9 +194,11 @@ public class GUIManager : MonoBehaviour {
         convidadoIsActive = true;
         guestMecAlc = convidado.GetMecanicasAlcool();
         guestMecHumor = convidado.GetMecanicasHumor();
+        EnterFixGestUIProblem();
 		//texto = convidado.valor.toString();
 	}
 	public void escondeConvidado(){
+        ExitFixGestUIProblem();
         panelConvidados.SetActive(false);
         convidadoIsActive = false;
         

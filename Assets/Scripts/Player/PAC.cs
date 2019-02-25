@@ -23,9 +23,7 @@ public class PAC : MonoBehaviour {
     //
     private NavMeshAgent agent;
     private Renderer rend;
-    public MecanicasAlcool MecAlc;
-    public MecanicasFome mecFome;
-    public MecanicasHumor mecHum;
+    private MecanicasAlcool MecAlc;
     private static RaycastHit hit;
     private static Vector3 clickPosition;
     //
@@ -37,8 +35,6 @@ public class PAC : MonoBehaviour {
     // Use this for initialization
     void Start () {
         instance = this;
-        mecHum=GetComponent<MecanicasHumor>();
-        mecFome=GetComponent<MecanicasFome>();
         MecAlc=GetComponent<MecanicasAlcool>();
 		agent = GetComponent<NavMeshAgent> ();
         rend = GetComponent<Renderer>();
@@ -178,7 +174,7 @@ public class PAC : MonoBehaviour {
         {
             other.gameObject.GetComponentInParent<Mesa>().menuPodeAtivar = true;
             //Retirar carne mesa
-            if ((other.gameObject.GetComponentInParent<Mesa>().carneMesa.GetComponent<Carne>()!=null)&&(other.gameObject.GetComponentInParent<Mesa>().carneMesa.GetComponent<Carne>().isActiveAndEnabled))
+            if (other.gameObject.GetComponentInParent<Mesa>().carneMesa.GetComponent<Carne>().isActiveAndEnabled)
             {
                 other.gameObject.GetComponentInParent<Mesa>().carneMesa.GetComponent<Carne>().estaNaMesa = true;
             }
@@ -208,7 +204,6 @@ public class PAC : MonoBehaviour {
         //itemAtual=Geladeira.Instance.PegarItem(item);
         if(item.GetComponent<Bebida>()){
             if(!MecAlc.bebendo){
-                mecHum.ModificarHumor(item.GetComponent<Bebida>().humorFlat);
                 MecAlc.CalculoAlcool(item);
                 Debug.Log("Alcool");
             }else{

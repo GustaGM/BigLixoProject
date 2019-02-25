@@ -56,7 +56,6 @@ MonoBehaviour:
   multiplicadorVirada: 2
   multiplicadorMistura: 2
   qualidadeBebida: 0
-  humorFlat: 5
   tamanhoBebida: 1
   tipo: 1
   nome: Volkweis

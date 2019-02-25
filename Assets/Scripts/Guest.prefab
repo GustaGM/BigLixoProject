@@ -27,9 +27,6 @@ GameObject:
   - component: {fileID: 114457806053368434}
   - component: {fileID: 114860024400920464}
   - component: {fileID: 114462544625214292}
-  - component: {fileID: 95375635755735052}
-  - component: {fileID: 114900190630275548}
-  - component: {fileID: 114412253747196068}
   m_Layer: 0
   m_Name: Guest
   m_TagString: Untagged
@@ -104,43 +101,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95375635755735052
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1654919895225014}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114412253747196068
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1654919895225014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Animator: {fileID: 0}
-  m_ParameterSendBits: 0
-  param0: 
-  param1: 
-  param2: 
-  param3: 
-  param4: 
-  param5: 
 --- !u!114 &114431455118583374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,7 +156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   humor: 0
-  humorRedutor: 0
 --- !u!114 &114860024400920464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,43 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702e9135a8f6b4f4a8e4dd9cbdf3d2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  estomagoTamanho: 15
-  digestao: 0
-  limitadorPlayer: 0
-  modificadorHumorFome: 0
-  iminenciaFome: 0
---- !u!114 &114900190630275548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1654919895225014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 0
-    i1: 6
-    i2: 60
-    i3: 93
-    i4: 159
-    i5: 1
-    i6: 237
-    i7: 196
-    i8: 121
-    i9: 186
-    i10: 7
-    i11: 250
-    i12: 3
-    i13: 82
-    i14: 114
-    i15: 190
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  estomagoTamanho: 0
 --- !u!195 &195654261031741440
 NavMeshAgent:
   m_ObjectHideFlags: 1
