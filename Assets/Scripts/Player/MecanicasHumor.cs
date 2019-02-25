@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MecanicasHumor : MonoBehaviour {
 
+	[SerializeField]
 	[Range(0f,100f)]
-	public float humor = 0;
+	private float humor = 0;
+	public float Humor{get{return humor;} set{humor = Mathf.Clamp(value,0,100);}}
 	[Range(-1.0f,1.0f)]
 	float humorParametro; //Determina onde na escala de humor a pessoa fica de mau humor.
 	public float humorRedutor; //Reducao fixa de humor por segundo
@@ -16,11 +18,15 @@ public class MecanicasHumor : MonoBehaviour {
 	float humorModificador; //Numero que determina a direcao e velocidade do humor apos uma atividade, aplicado todo segundo.
 	[Range(-3f,3f)]
 	private int humorIntensidade; //Demonstra a variavel anterior
+	public int HumorIntensidade{get{return humorIntensidade;} set{humorIntensidade = Mathf.Clamp(value,-3,3);}}
+	int aux=0;
+	public bool trocou=true;
+
 
 	float timer=0;
 	// Use this for initialization
 	void Start () {
-		humorRedutor=humorRedutor*GameManager.Instance.multiplicadorMestreHumor;
+		//humorRedutor=humorRedutor*GameManager.Instance.multiplicadorMestreHumor;
 	}
 	
 	// Update is called once per frame
@@ -28,17 +34,17 @@ public class MecanicasHumor : MonoBehaviour {
 		AtualizarHumor();
 	}
 	public void ModificarHumor(float x){
-		x=x*GameManager.Instance.multiplicadorMestreHumor;
-		humor=humor+x;
+		//x=x*GameManager.Instance.multiplicadorMestreHumor;
+		Humor=Humor+x;
 		humorModificador=humorModificador+(x*percentualModificador);
-		RegularHumor();
 	}
 	private void AtualizarHumor(){
 		timer += Time.deltaTime;
 		if(timer>1f){
-			humor=humor-humorRedutor+humorModificador;
+			Humor=humor-humorRedutor+humorModificador;
 			humorModificador=humorModificador-(humorRedutor*percentualRedutor);
-			RegularHumor();
+			DefinirIntensidade();
+
 			timer=0;
 		}
 	}
@@ -64,16 +70,16 @@ public class MecanicasHumor : MonoBehaviour {
 		{
 			humorIntensidade=1;
 		}
+		ChecaMudancaIntesidade();
+		aux=humorIntensidade;
 	}
-	public float getHumor(){
-		return humor;
-	}
-	void RegularHumor(){
-		if(humor>100){
-			humor=100;
-		}else if(humor<0){
-			humor=0;
+	private void ChecaMudancaIntesidade(){
+		if(humorIntensidade!=aux){
+			trocou=true;
+		}else{
+			trocou=false;
 		}
-		
 	}
+
+
 }

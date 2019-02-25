@@ -47,7 +47,7 @@ public class PAC : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Acoes(NoQueClicou());
-        bebisseReference=MecAlc.bebisse;
+        bebisseReference=MecAlc.Bebisse;
         //Debug.Log(bebisse);
         if(Input.GetKeyDown(KeyCode.Escape)){
             MiniMenuManager();

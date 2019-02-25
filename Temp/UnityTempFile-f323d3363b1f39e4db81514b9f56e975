@@ -2,7 +2,7 @@
 -target:library
 -nowarn:0169
 -langversion:4
--out:Temp/UnityEditor.StandardEvents.dll
+-out:Temp/Assembly-CSharp.dll
 -nostdlib
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
@@ -37,7 +37,6 @@
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
--r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.StreamingModule.dll"
@@ -67,39 +66,27 @@
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.XRModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/Unity.Locator.dll"
+-r:Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
+-r:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+-r:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
+-r:Library/ScriptAssemblies/Unity.TextMeshPro.dll
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
--r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll"
--r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
--r:C:/Users/warcr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
 -r:C:/Users/warcr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
--r:C:/Users/warcr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll
--r:C:/Users/warcr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll
 -r:C:/Users/warcr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\mscorlib.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Core.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Runtime.Serialization.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Xml.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Xml.Linq.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.Lang.dll"
--r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\Boo.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Core.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.Linq.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\Boo.Lang.dll"
 -define:UNITY_5_3_OR_NEWER
 -define:UNITY_5_4_OR_NEWER
 -define:UNITY_5_5_OR_NEWER
@@ -196,4 +183,74 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
-C:/Users/warcr/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/Editor/Importer.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineBlendListCamera.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineBrain.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineClearShot.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineCollider.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineConfiner.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineDollyCart.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineExternalCamera.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineFollowZoom.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineFreeLook.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineMixingCamera.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachinePath.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachinePipeline.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineSmoother.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineSmoothPath.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineStateDrivenCamera.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineTargetGroup.cs
+Assets/Cinemachine/Base/Runtime/Behaviours/CinemachineVirtualCamera.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineBasicMultiChannelPerlin.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineComposer.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineFramingTransposer.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineGroupComposer.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineHardLockToTarget.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineHardLookAt.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineOrbitalTransposer.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachinePOV.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineSameAsFollowObject.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineTrackedDolly.cs
+Assets/Cinemachine/Base/Runtime/Components/CinemachineTransposer.cs
+Assets/Cinemachine/Base/Runtime/Core/AxisState.cs
+Assets/Cinemachine/Base/Runtime/Core/CameraState.cs
+Assets/Cinemachine/Base/Runtime/Core/CinemachineBlend.cs
+Assets/Cinemachine/Base/Runtime/Core/CinemachineBlenderSettings.cs
+Assets/Cinemachine/Base/Runtime/Core/CinemachineComponentBase.cs
+Assets/Cinemachine/Base/Runtime/Core/CinemachineCore.cs
+Assets/Cinemachine/Base/Runtime/Core/CinemachineDebugLogger.cs
+Assets/Cinemachine/Base/Runtime/Core/CinemachineExtension.cs
+Assets/Cinemachine/Base/Runtime/Core/CinemachinePathBase.cs
+Assets/Cinemachine/Base/Runtime/Core/CinemachinePropertyAttribute.cs
+Assets/Cinemachine/Base/Runtime/Core/CinemachineVirtualCameraBase.cs
+Assets/Cinemachine/Base/Runtime/Core/GaussianFilter.cs
+Assets/Cinemachine/Base/Runtime/Core/ICinemachineCamera.cs
+Assets/Cinemachine/Base/Runtime/Core/ICinemachineComponent.cs
+Assets/Cinemachine/Base/Runtime/Core/LensSettings.cs
+Assets/Cinemachine/Base/Runtime/Core/NoiseSettings.cs
+Assets/Cinemachine/Base/Runtime/Core/Predictor.cs
+Assets/Cinemachine/Base/Runtime/Core/ReflectionHelpers.cs
+Assets/Cinemachine/Base/Runtime/Core/SplineHelpers.cs
+Assets/Cinemachine/Base/Runtime/Core/UnityVectorExtensions.cs
+Assets/Cinemachine/PostFX/CinemachinePostFX.cs
+Assets/Cinemachine/PostFX/CinemachinePostProcessing.cs
+Assets/Cinemachine/Timeline/CinemachineMixer.cs
+Assets/Cinemachine/Timeline/CinemachineShot.cs
+Assets/Cinemachine/Timeline/CinemachineTrack.cs
+Assets/Scripts/Player/Bebida.cs
+Assets/Scripts/Player/Carne.cs
+Assets/Scripts/Player/Churrasqueira.cs
+Assets/Scripts/Player/GameManager.cs
+Assets/Scripts/Player/GameSettings.cs
+Assets/Scripts/Player/Geladeira.cs
+Assets/Scripts/Player/Guest.cs
+Assets/Scripts/Player/GUIManager.cs
+Assets/Scripts/Player/Interactive.cs
+Assets/Scripts/Player/Item.cs
+Assets/Scripts/Player/MecanicasAlcool.cs
+Assets/Scripts/Player/MecanicasFome.cs
+Assets/Scripts/Player/MecanicasHumor.cs
+Assets/Scripts/Player/Mesa.cs
+Assets/Scripts/Player/PAC.cs
+Assets/Scripts/Player/PlayerInventario.cs
+Assets/Scripts/Player/PosicaoPessoa.cs
+Assets/Scripts/Player/SettingsManager.cs

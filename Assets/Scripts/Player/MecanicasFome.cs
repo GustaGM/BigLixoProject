@@ -21,8 +21,8 @@ public class MecanicasFome : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		iminenciaFome=iminenciaFome*GameManager.Instance.multiplicadorMestreFome;
-		digestao=digestao/Mathf.CeilToInt(GameManager.Instance.multiplicadorMestreFome);
+		//iminenciaFome=iminenciaFome*GameManager.Instance.multiplicadorMestreFome;
+		//digestao=digestao/Mathf.CeilToInt(GameManager.Instance.multiplicadorMestreFome);
 	}
 	
 	// Update is called once per frame
