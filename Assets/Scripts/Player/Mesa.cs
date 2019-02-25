@@ -11,9 +11,11 @@ public class Mesa : Interactive {
 	//
 	public int fatorSub = 0 ;
 	//
-	public int tempoNaMesa = 15;
+	public int tempoNaMesa = 30;
 	//
 	public GameObject mesaTrigger;
+	static Mesa instance;
+    public static Mesa Instance { get { return instance;} }
 	// Use this for initialization
 	void Start () {
 	}
@@ -52,11 +54,11 @@ public class Mesa : Interactive {
 			carneTimer+=Time.deltaTime;
 			if (carneTimer>(tempoNaMesa - fatorSub))
 			{
-				RevCarne();
+				DesligarCarne();
 			}
 		}
 	}
-	private void RevCarne(){
+	public void DesligarCarne(){
 		carneMesa.SetActive(false);
 		temCarneNaMesa = false;
 		carneTimer = 0;
